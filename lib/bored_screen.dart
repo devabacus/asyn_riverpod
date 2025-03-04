@@ -26,7 +26,7 @@ class BoredScreen extends ConsumerWidget {
 
     return switch (suggest) {
       AsyncData(:final value) => Text('data: $value'),
-      AsyncData(:final error) => Text('error: $error'),
+      AsyncError(:final error) => Text('error: $error'),
       _ => const Text('loading')
     };
   }
