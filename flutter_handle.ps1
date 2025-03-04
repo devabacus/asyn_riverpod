@@ -17,3 +17,4 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 dart run build_runner build
+flutter pub add http

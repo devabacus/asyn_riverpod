@@ -22,12 +22,7 @@ final counterStremProvider = AutoDisposeStreamProvider<int>.internal(
 @Deprecated('Will be removed in 3.0. Use Ref instead')
 // ignore: unused_element
 typedef CounterStremRef = AutoDisposeStreamProviderRef<int>;
-
-
-
-
-
-String _$counterHash() => r'7015b4a05f8ed24a914f6b3aad12be335d0c73d7';
+String _$counterHash() => r'b20b17bcb6d8a28751858f394c900f611f0efbec';
 
 /// See also [Counter].
 @ProviderFor(Counter)

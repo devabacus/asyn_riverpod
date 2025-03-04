@@ -27,7 +27,7 @@ class AdvancedScreen extends HookConsumerWidget {
     useEffect(() {
       print('Глобальный счетчик ${counter}, локальный счетчик ${localCounter.value}');
       return null;
-    }, [counter, localCounter]);
+    }, [counter, localCounter.value]);
 
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
