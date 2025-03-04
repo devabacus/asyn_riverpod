@@ -15,5 +15,5 @@ flutter pub add hooks_riverpod
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-asdf
-asdfas;ldkf
+
+dart run build_runner build

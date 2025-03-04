@@ -1,42 +1,30 @@
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:asyn_riverpod/counter_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 void main() {
-  runApp(ProviderScope(child: MyApp()));
+  ProviderScope(child: App());
 }
 
-final counterProvider = StreamProvider<int>((ref) {
-  return Stream.periodic(Duration(seconds: 1), (count) => count).take(10);
-});
-
-class CounterShower extends ConsumerWidget {
-  const CounterShower({super.key});
-
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final counter = ref.watch(counterProvider);
-    return counter.when(
-      data: (data) => Text('значекние счетчика: $data'),
-      error: (error, _) => Text("Ошибка $error"),
-      loading: () => CircularProgressIndicator(),
-    );
-  }
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class App extends StatelessWidget {
+  const App({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: Home());
+    return MaterialApp(home: HomeScreen());
   }
 }
 
-class Home extends StatelessWidget {
-  const Home({super.key});
+class HomeScreen extends StatelessWidget {
+    const HomeScreen({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(body: Center(child: CounterShower()));
-  }
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(child: CounterScreen()),
+        );
+    }
 }
+
+
