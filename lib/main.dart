@@ -4,7 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 void main() {
-  ProviderScope(child: App());
+  runApp(ProviderScope(child: App()));
 }
 
 class App extends StatelessWidget {
@@ -17,14 +17,10 @@ class App extends StatelessWidget {
 }
 
 class HomeScreen extends StatelessWidget {
-    const HomeScreen({super.key});
+  const HomeScreen({super.key});
 
-    @override
-    Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(child: CounterScreen()),
-        );
-    }
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(body: Center(child: AdvancedScreen()));
+  }
 }
-
-
