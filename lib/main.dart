@@ -1,15 +1,14 @@
-import 'package:asyn_riverpod/bored_screen.dart';
-import 'package:asyn_riverpod/counter_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:riverpod_annotation/riverpod_annotation.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
+
 
 void main() {
-  runApp(ProviderScope(child: App()));
+  runApp(ProviderScope(child: MyApp()));
 }
 
-class App extends StatelessWidget {
-  const App({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,11 +16,13 @@ class App extends StatelessWidget {
   }
 }
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends ConsumerWidget {
   const HomeScreen({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(body: Center(child: BoredScreen()));
+  Widget build(BuildContext context, WidgetRef ref) {
+    return Scaffold(
+      body: Center(child: Text("ivan", style: TextStyle(fontSize: 20))),
+    );
   }
 }
