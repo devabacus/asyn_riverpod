@@ -15,7 +15,7 @@ class ActivityScreen extends StatelessWidget {
         return Center(
           child: switch (activity) {
             AsyncData(:final value) => Text('Activity: ${value.activity}'),
-            AsyncError(:final error, :final stackTrace) => const Text("error $error"),
+            AsyncError(:final error, :final stackTrace) => Text("error $error"),
             _ => const CircularProgressIndicator(),
           },
         );
