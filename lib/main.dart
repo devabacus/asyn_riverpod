@@ -1,6 +1,6 @@
+import 'package:asyn_riverpod/activity_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
 
 
 void main() {
@@ -22,7 +22,7 @@ class HomeScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
-      body: Center(child: Text("ivan", style: TextStyle(fontSize: 20))),
+      body: ActivityScreen(),
     );
   }
 }
