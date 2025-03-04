@@ -13,5 +13,7 @@ flutter pub add dev:custom_lint
 flutter pub add dev:riverpod_lint
 flutter pub add hooks_riverpod
 
-# import 'package:flutter_riverpod/flutter_riverpod.dart';
-# import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+asdf
+asdfas;ldkf
